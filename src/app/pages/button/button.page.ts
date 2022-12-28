@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonPage implements OnInit {
 
+  active: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClick() {
+    this.active = !this.active;
+  }
 }
