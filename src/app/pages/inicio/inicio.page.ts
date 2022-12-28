@@ -42,7 +42,7 @@ export class InicioPage implements OnInit {
     },
     {
       icon: 'beaker',
-      name: 'Card',
+      name: 'Cards',
       redirectTo: '/card'
     },
     {
