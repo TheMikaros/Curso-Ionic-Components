@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'fab',
     loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'infinite',
+    loadChildren: () => import('./pages/infinite/infinite.module').then( m => m.InfinitePageModule)
   }
 ];
 

@@ -1,12 +1,12 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GridPageRoutingModule } from './grid-routing.module';
+import { InfinitePageRoutingModule } from './infinite-routing.module';
 
-import { GridPage } from './grid.page';
+import { InfinitePage } from './infinite.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,10 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    GridPageRoutingModule,
+    InfinitePageRoutingModule,
     ComponentsModule
+
   ],
-  declarations: [GridPage]
+  declarations: [InfinitePage]
 })
-export class GridPageModule {}
+export class InfinitePageModule {}
