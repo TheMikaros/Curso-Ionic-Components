@@ -36,3 +36,11 @@ ion-item {
 ion-searchbar {
   --box-shadow: none !important;
 }
+
+ion-loading.custom-loading {
+  --background: url('assets/yamato.png')
+
+  --spinner-color: #1c6dff;
+
+  color: #1c6dff;
+}
