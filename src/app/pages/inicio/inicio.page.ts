@@ -31,27 +31,27 @@ export class InicioPage implements OnInit {
       redirectTo: '/alert'
     },
     {
-      icon: 'beaker',
+      icon: 'person',
       name: 'Avatar',
       redirectTo: '/avatar'
     },
     {
-      icon: 'beaker',
+      icon: 'paw',
       name: 'Buttons',
       redirectTo: '/button'
     },
     {
-      icon: 'beaker',
+      icon: 'mail',
       name: 'Cards',
       redirectTo: '/card'
     },
     {
-      icon: 'beaker',
+      icon: 'switch',
       name: 'CheckBox',
       redirectTo: '/check'
     },
     {
-      icon: 'beaker',
+      icon: 'calendar',
       name: 'Date Time',
       redirectTo: '/datetime'
     },
