@@ -9,8 +9,9 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
-          Menu Item {{ i }}
+        <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
+          <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+          {{ c.name }}
         </ion-item>
       </ion-list>
     </ion-content>
