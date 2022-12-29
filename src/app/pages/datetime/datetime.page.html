@@ -10,8 +10,16 @@
 
     <ion-item>
       <ion-label>Fecha de Nacimiento</ion-label>
-      <ion-datetime-button display-format="DD MMMM YYYY"
-                    (ionChange)="cambioFecha( $event )"></ion-datetime-button>
+
+
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime" presentation="date" display-format="DD MMMM YYYY"
+                    ></ion-datetime>
+            </ng-template>
+      </ion-modal>
+
     </ion-item>
 
 
@@ -21,24 +29,58 @@
 
     <ion-item>
       <ion-label>Min y Max</ion-label>
-      <ion-datetime display-format="DD MMMM YYYY"
+
+
+      <ion-datetime-button datetime="datetime2"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime2" presentation="date" min="2015-01-01"
+          max="2025-12-31" pickerFormat="D MMM YYYY" hourValues="null" minuteValues="null"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+      <!-- deprecate, no fucniona a la fecha 29/12/2022 -->
+      <!-- <ion-datetime display-format="DD MMMM YYYY"
                     min="2015-01-01"
-                    max="2025-12-31"></ion-datetime>
+                    max="2025-12-31"></ion-datetime> -->
     </ion-item>
 
     <ion-item>
       <ion-label>Años</ion-label>
-      <ion-datetime display-format="YYYY"
+
+      <ion-datetime-button datetime="datetime3"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime display-format="YYYY" id="datetime3" presentation="year"
                     min="2015"
                     max="2025"></ion-datetime>
+           </ng-template>
+      </ion-modal>
+
+
+
+      <!-- <ion-datetime display-format="YYYY"
+                    min="2015"
+                    max="2025"></ion-datetime> -->
+
     </ion-item>
 
 
     <ion-item>
       <ion-label>Custom Options</ion-label>
 
-    <ion-datetime-button display-format="DD MMMM YYYY"
-                    (ionChange)="cambioFecha( $event )"></ion-datetime-button>
+  <ion-button (click)="presentPicker()">Show Picker</ion-button>
+
+      <!-- <ion-datetime-button datetime="datetime4"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+        <ion-datetime [monthValues]="customPickerOptions" id="datetime4" presentation="date"
+                    [yearValues]="customYearValues"></ion-datetime>
+           </ng-template>
+      </ion-modal> -->
+<!-- deprecated a 29/12/2022 -->
+    <!-- <ion-datetime-button display-format="DD MMMM YYYY"
+                    (ionChange)="cambioFecha( $event )"></ion-datetime-button> -->
     </ion-item>
 
 
