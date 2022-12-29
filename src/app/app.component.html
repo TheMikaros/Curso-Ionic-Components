@@ -1,4 +1,22 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>
+          Start menu
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+          Menu Item {{ i }}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
 
